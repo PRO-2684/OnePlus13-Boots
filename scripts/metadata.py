@@ -41,4 +41,9 @@ with open("output/note.md", "w") as f:
     f.write(note)
 
 # Set output for later use
-setOutput("version_name", metadata["version_name"])
+version_name = metadata["version_name"]
+if metadata["product_name"] == "CPH2653EEA": # EU
+    version_name += "(EU)"
+elif metadata["product_name"] == "CPH2653":
+    version_name += "(GLO)"
+setOutput("version_name", version_name)
