@@ -35,7 +35,7 @@ jobs:
     - name: Parse metadata
       id: parse-metadata
       run: |
-        python3 ./scripts/release-note.py ${{ github.event.inputs.file_url }}
+        python3 ./scripts/metadata.py ${{ github.event.inputs.file_url }}
 
     - name: Create release
       uses: softprops/action-gh-release@v2
